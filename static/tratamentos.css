@@ -70,3 +70,64 @@ body {
     margin-bottom: 50px;
     
 }
+
+.treatments-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+.treatments-page p {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    margin: 35px;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+
+.treatments {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.treatments img {
+    height: 300px;
+    width: 300px;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+.treatments h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-left: 10px;
+    color: black;
+}
+
+i {
+    margin-left: 8px; 
+}
+
+.bi-arrow-right-short {
+    font-size: 26px;
+    color: black;
+}
+
+.treatment-option a {
+    display: block;
+    text-decoration: none;
+}
+
+.treatment-option a:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
