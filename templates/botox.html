@@ -23,7 +23,11 @@
 <body>
     <div class="header">
         <div class="header-top">
-            <a href="/templates/index.html"><img src="/static/img/santiclinic-logo.png" alt="santiclinic-logo" class="logo-header"></a>
+            <div class="logo-toggle">
+                <a href="/templates/index.html"><img src="/static/img/santiclinic-logo.png" alt="santiclinic-logo" class="logo-header"></a>
+                <label for="toggle-menu" class="toggle-menu"><i class="bi bi-list"></i></label>
+            </div>            
+            <input type="checkbox" id="toggle-menu" hidden>
             <nav class="nav">
                 <ul class="links">
                     <li><a href="/templates/index.html">HOME</a></li>
@@ -141,7 +145,7 @@
             <div class="form-fields">
                 <input type="text" class="form-control" id="name" name="name" placeholder="Nome*">
                 <input type="email" class="form-control" id="phone" name="phone" placeholder="Email*">
-                <input type="tel" class="form-control" id="email" name="email" placeholder="Enter Telemóvel">
+                <input type="tel" class="form-control" id="email" name="email" placeholder="Telemóvel">
                 <select class="form-select form-control" id="exampleSelect1">
                     <option>Consulta de Avaliação</option>
                     <option>Tratamento Botox</option>
