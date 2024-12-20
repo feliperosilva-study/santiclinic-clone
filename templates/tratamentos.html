@@ -23,7 +23,11 @@
 <body>
     <div class="header">
         <div class="header-top">
-            <a href="/templates/index.html"><img src="/static/img/santiclinic-logo.png" alt="santiclinic-logo" class="logo-header"></a>
+            <div class="logo-toggle">
+                <a href="/templates/index.html"><img src="/static/img/santiclinic-logo.png" alt="santiclinic-logo" class="logo-header"></a>
+                <label for="toggle-menu" class="toggle-menu"><i class="bi bi-list"></i></label>
+            </div>            
+            <input type="checkbox" id="toggle-menu" hidden>
             <nav class="nav">
                 <ul class="links">
                     <li><a href="/templates/index.html">HOME</a></li>
