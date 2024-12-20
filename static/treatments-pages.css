@@ -243,6 +243,25 @@ body {
     border: none;
 }
 
+.flash {
+    margin-top: 5px;  /* Add some space above the flash message */
+    padding: 0;
+    list-style-type: none;
+    text-align: left;  /* Align text to the left */
+}
+
+.error, .error-nome, .error-tel {
+    color: red;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+    list-style-type: none;
+}
+
 .button button {
     border-radius: 15px;
     background-color: goldenrod;
@@ -534,9 +553,6 @@ body {
     
     .links-dropdown {
         left: auto;
-    }
-
-    .treatment-info {
     }
     
     .specific-info {
