@@ -57,6 +57,10 @@ body {
     cursor: pointer;
 }
 
+.bi-chevron-down {
+    margin-left: 8px; 
+}
+
 .dropdown {
     position: relative;
 }
@@ -420,7 +424,7 @@ body {
     }
 
     .types-treatment {
-        max-width: 95%;
+        max-width: 95% !important;
         gap: 10px;
     }
 

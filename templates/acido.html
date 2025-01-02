@@ -26,17 +26,17 @@
             <a href="/templates/index.html"><img src="/static/img/santiclinic-logo.png" alt="santiclinic-logo" class="logo-header"></a>
             <nav class="nav">
                 <ul class="links">
-                    <li><a href="/templates/index.html">HOME</a></li>
-                    <li><a href="/templates/sobre.html">SOBRE NÓS</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('sobre') }}">SOBRE NÓS</a></li>
                     <li class="dropdown">
                         <label for="toggle" class="toggle">PROCEDIMENTOS<i class="bi bi-chevron-down"></i>
                         <input type="checkbox" id="toggle" hidden>
                         <ul class="links-dropdown">
-                            <li><a href="/templates/tratamentos.html">TRATAMENTOS</a></li>
+                            <li><a href="{{ url_for('tratamentos') }}">TRATAMENTOS</a></li>
                             <li><a href="">MICROCIRURGIA</a></li>
                         </ul>
                     </li>
-                    <li><a href="/templates/contactos.html">CONTACTOS</a></li>
+                    <li><a href="{{ url_for('contactos') }}">CONTACTOS</a></li>
                     <li><a href="https://santiskin.com/">SANTISKIN</a></li>
                     <li><a href=""><button type="button" class="btn btn-primary">Marcar Consulta</button></a></li>
                 </ul>
@@ -45,4 +45,165 @@
         <div class="header-title">
              <h1 class="title">ÁCIDO HIALURÓNICO</h1>
         </div>   
+    </div>
+
+    <div class="treatment-info">
+        <div class="specific-info">
+            <p>
+                O <strong>ácido hialurônico</strong> é uma substância naturalmente presente no nosso corpo, especialmente na pele, onde desempenha um papel crucial na manutenção da hidratação e elasticidade.
+                <br>
+                <br>
+                Com o passar dos anos, os níveis de ácido hialurônico diminuem, resultando na perda de volume, aparecimento de rugas e linhas de expressão.
+                <br>
+                <br>
+                Este procedimento devolve o volume perdido em áreas como lábios e maçãs do rosto, proporcionando um contorno mais harmonioso e jovem, também suavizar linhas de expressão e rugas, como as linhas do sorriso.
+                <br>
+                <br>
+                Devido às suas características hidratantes o ácido hialurónico melhora o aspeto de olheiras escuras e cansadas, retornando hidratação à área tornando as mesmas mais claras.
+                <br>
+                <br>
+                Os resultados são visíveis imediatamente após a aplicação, com um leve inchaço que desaparece em poucas horas.
+            </p>
+            <img src="/static/img/acido-hialuronico.jpg" alt="" class="acido-img">
+        </div>
+
+        <div class="golden-line"><p></p></div>
+        
+        <div class="types-treatment">
+            <div class="types">
+               <h2>Preenchimento de Lábios</h2>
+               <p>Aumentar o volume, definir o contorno e melhorar a forma dos lábios.</p> 
+            </div>
+            <div class="types">
+               <h2>Tratamento Sulco Nasal</h2>
+               <p>Preencher e suavizar linha de expressão do nariz ao canto da boca.</p> 
+            </div>
+            <div class="types">
+               <h2>Tratamento Rugas Periorais</h2>
+               <p>Suaviza e reduz as rugas ao redor da boca ou rugas do sorriso.</p> 
+            </div>
+            <div class="types">
+               <h2>Tratamento Malar</h2>
+               <p>Preenchimento do espaço entre as células da pele e realçando o contorno das maçãs do rosto.</p> 
+            </div>
+            <div class="types">
+               <h2>Projeção do Mento</h2>
+               <p>Refere-se à extensão e definição da região do queixo. Projetando esta região para uma harmonização facial.</p> 
+            </div>
+            <div class="types">
+               <h2>Tratamento de Olheiras</h2>
+               <p>Suaviza a área e minimiza a aparência das olheiras, devido à hidratação do AH.</p> 
+            </div>
+            <div class="types">
+               <h2>Rinomodelação</h2>
+               <p>Rinoplastia não cirúrgica, ajustes estéticos no nariz sem passar por uma intervenção cirúrgica invasiva.</p> 
+            </div>
+            <div class="types">
+               <h2>Contorno Mandibular</h2>
+               <p>Adiciona volume e define a linha da mandíbula, criando uma aparência mais angular.</p> 
+            </div>
+            <div class="types">
+               <h2>Bum Bum</h2>
+               <p>Aplicação de ácido hialurónico de forma a aumentar o volume e firmeza na região dos glúteos.</p> 
+            </div>            
+        </div>
+
+        <div class="golden-line"><p></p></div>
+    </div>
+
+    <div class="specs-background">
+        <div class="treatment-specs">
+            <div class="specs">
+                <i class="bi bi-calendar3"></i>
+                <h2>Sessões</h2>
+                <p>A partir de 1 Sessão</p> 
+            </div>
+            <div class="specs">
+                <i class="bi bi-hourglass-split"></i>
+                <h2>Duração</h2>
+                <p>30-50 Minutos</p> 
+            </div>
+            <div class="specs">
+                <i class="bi bi-heart-fill"></i>
+                <h2>Recuperação</h2>
+                <p>2 dias</p> 
+            </div>
+            <div class="specs">
+                <i class="bi bi-alarm-fill"></i>
+                <h2>Manutenção</h2>
+                <p>9-12 Meses</p> 
+            </div>
+            <div class="specs">
+                <i class="bi bi-star-fill"></i>
+                <h2>Preços</h2>
+                <p>A partir 310€</p> 
+            </div>
+        </div>
+    </div>
+
+    <div class="form" id="form-tratamento">
+        <h2>INTERESSADO? MARQUE UMA CONSULTA.</h2>
+        <form method="POST" action="/form-tratamento">
+            <fieldset>              
+            <div class="form-fields">
+                <input type="text" class="form-control" id="name" name="nome" placeholder="Nome*">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email*">
+                <input type="tel" class="form-control" id="tel" name="telemovel" placeholder="Telemóvel*">
+                <select class="form-select form-control" id="exampleSelect1" name="consulta">
+                    <option>Consulta de Avaliação</option>
+                    <option>Tratamento Botox</option>
+                    <option>Ácido Hialurónico</option>
+                    <option>Harmonização Facial</option>
+                    <option>Bio-Estimulador</option>
+                    <option>Peeling Químico</option>
+                    <option>Lemon Bottle</option>
+                    <option>Mesoterapia</option>
+                    <option>Collagen Trifecta</option>
+                    <option>Remoção de AH</option>
+                    <option>Análises</option>
+                </select>
+                <input type="text" class="form-control" id="duvida" name="duvida" placeholder="Diga-nos se tem alguma dúvida">
+                <div class="button">
+                    <button type="submit" class="btn btn-primary">ENVIAR</button>
+                </div>                    
+            </div>
+            </fieldset>
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flash">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}    
+    </div>
+
+    <div class="footer-background">
+        <div class="footer">
+            <div>
+                <a href="{{ url_for('home') }}"><img src="/static/img/santiclinic-logo white.png" alt="" class="logo-footer"></a>
+            </div>
+            <div class="footer-menu">
+                <div class="footer-links">
+                    <a href="{{ url_for('sobre') }}">SOBRE NÓS</a>
+                    <a href="{{ url_for('tratamentos') }}">TRATAMENTOS</a>
+                    <a href="{{ url_for('contactos') }}">CONTACTOS</a>
+                </div>
+                <div class="footer-links">
+                    <a href="https://santiskin.com/">SANTISKIN</a>
+                    <a href="">BLOG</a>
+                </div>
+                <div class="social-footer">
+                    <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://tiktok.com/"><i class="bi bi-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="image-footer">
+            <img src="/static/img/img-footer-1.png" alt="">
+            <img src="/static/img/img-footer-2.png" alt="">
+        </div>         
     </div>

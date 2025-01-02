@@ -9,6 +9,14 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
 @app.route('/tratamentos')
 def tratamentos():
     return render_template('tratamentos.html')
@@ -16,6 +24,42 @@ def tratamentos():
 @app.route('/botox')
 def botox():
     return render_template('botox.html')
+
+@app.route('/acido')
+def acido():
+    return render_template('acido.html')
+
+@app.route('/harmonizacao')
+def harmonizacao():
+    return render_template('harmonizacao.html')
+
+@app.route('/bio')
+def bio():
+    return render_template('bio-estimulador.html')
+
+@app.route('/peeling')
+def peeling():
+    return render_template('peeling.html')
+
+@app.route('/lemon')
+def lemon():
+    return render_template('lemon.html')
+
+@app.route('/mesoterapia')
+def mesoterapia():
+    return render_template('mesoterapia.html')
+
+@app.route('/collagen')
+def collagen():
+    return render_template('collagen.html')
+
+@app.route('/remocao')
+def remocao():
+    return render_template('remocao.html')
+
+@app.route('/analises')
+def analises():
+    return render_template('analises.html')
 
 @app.route ('/form-tratamento', methods=['POST'])
 def formulario():
@@ -52,6 +96,10 @@ def formulario():
 
         flash('Formulário enviado com sucesso', 'success')
         return redirect(url_for('botox', _anchor='form-tratamento'))
+    
+@app.route('/contactos')
+def contactos():
+    return render_template('contactos.html')
     
     
 if __name__ == '__main__':

@@ -30,8 +30,8 @@
             <input type="checkbox" id="toggle-menu" hidden>
             <nav class="nav">
                 <ul class="links">
-                    <li><a href="/templates/index.html">HOME</a></li>
-                    <li><a href="/templates/sobre.html">SOBRE NÓS</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('sobre') }}">SOBRE NÓS</a></li>
                     <li class="dropdown">
                         <label for="toggle" class="toggle">PROCEDIMENTOS<i class="bi bi-chevron-down"></i>
                         <input type="checkbox" id="toggle" hidden>
@@ -40,7 +40,7 @@
                             <li><a href="">MICROCIRURGIA</a></li>
                         </ul>
                     </li>
-                    <li><a href="/templates/contactos.html">CONTACTOS</a></li>
+                    <li><a href="{{ url_for('contactos') }}">CONTACTOS</a></li>
                     <li><a href="https://santiskin.com/">SANTISKIN</a></li>
                     <li><a href=""><button type="button" class="btn btn-primary">Marcar Consulta</button></a></li>
                 </ul>
@@ -179,23 +179,23 @@
 
     <div class="footer-background">
         <div class="footer">
-        <div>
-                <img src="/static/img/santiclinic-logo white.png" alt="" class="logo-footer">
+            <div>
+                <a href="{{ url_for('home') }}"><img src="/static/img/santiclinic-logo white.png" alt="" class="logo-footer"></a>
             </div>
             <div class="footer-menu">
                 <div class="footer-links">
-                    <a href="">SOBRE NÓS</a>
+                    <a href="{{ url_for('sobre') }}">SOBRE NÓS</a>
                     <a href="{{ url_for('tratamentos') }}">TRATAMENTOS</a>
-                    <a href="">CONTACTOS</a>
+                    <a href="{{ url_for('contactos') }}">CONTACTOS</a>
                 </div>
                 <div class="footer-links">
-                    <a href="">SANTISKIN</a>
+                    <a href="https://santiskin.com/">SANTISKIN</a>
                     <a href="">BLOG</a>
                 </div>
                 <div class="social-footer">
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-tiktok"></i></a>
+                    <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://tiktok.com/"><i class="bi bi-tiktok"></i></a>
                 </div>
             </div>
         </div>

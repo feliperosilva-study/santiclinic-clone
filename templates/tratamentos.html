@@ -30,8 +30,8 @@
             <input type="checkbox" id="toggle-menu" hidden>
             <nav class="nav">
                 <ul class="links">
-                    <li><a href="/templates/index.html">HOME</a></li>
-                    <li><a href="/templates/sobre.html">SOBRE NÓS</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('sobre') }}">SOBRE NÓS</a></li>
                     <li class="dropdown">
                         <label for="toggle" class="toggle">PROCEDIMENTOS<i class="bi bi-chevron-down"></i>
                         <input type="checkbox" id="toggle" hidden>
@@ -40,7 +40,7 @@
                             <li><a href="">MICROCIRURGIA</a></li>
                         </ul>
                     </li>
-                    <li><a href="/templates/contactos.html">CONTACTOS</a></li>
+                    <li><a href="{{ url_for('contactos') }}">CONTACTOS</a></li>
                     <li><a href="https://santiskin.com/">SANTISKIN</a></li>
                     <li><a href=""><button type="button" class="btn btn-primary">Marcar Consulta</button></a></li>
                 </ul>
@@ -68,63 +68,63 @@
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/acido.html">
+                <a href="{{ url_for('acido') }}">
                     <img src="/static/img/acido-hialuronico.jpg" alt="">
                     <h2>ÁCIDO HIALURÓNICO</h2>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/harmonizacao.html">
+                <a href="{{ url_for('harmonizacao') }}">
                     <img src="/static/img/harmonizacao-facial.jpg" alt=""> 
                     <h2>HARMONIZAÇÃO FACIAL</h2>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/bio-estimulador.html">
+                <a href="{{ url_for('bio') }}">
                     <img src="/static/img/bio-estimulador.jpg" alt="">
                     <h2>BIO-ESTIMULADOR</h2> 
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/peeling.html">
+                <a href="{{ url_for('peeling') }}">
                     <img src="/static/img/peeling-quimico.jpg" alt="">
                     <h2>PEELING QUÍMICO</h2> 
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/lemon.html">
+                <a href="{{ url_for('lemon') }}">
                     <img src="/static/img/lemon-bottle.jpeg" alt="">
                     <h2>LEMON BOTTLE</h2>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/mesoterapia.html">
+                <a href="{{ url_for('mesoterapia') }}">
                     <img src="/static/img/mesoterapia.jpg" alt="">
                     <h2>MESOTERAPIA</h2> 
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/collagen.html">
+                <a href="{{ url_for('collagen') }}">
                     <img src="/static/img/collagen-trifecta.jpg" alt="">
                     <h2>COLLAGEN TRIFECTA</h2>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/remocao.html">
+                <a href="{{ url_for('remocao') }}">
                     <img src="/static/img/remocao-ah.jpg" alt=""> 
                     <h2>REMOÇÃO DE AH</h2>
                     <i class="bi bi-arrow-right-short"></i>
                 </a>
             </div>
             <div class="treatment-option">
-                <a href="/templates/analises.html">
+                <a href="{{ url_for('analises') }}">
                     <img src="/static/img/analises.jpeg" alt="">
                     <h2>ANÁLISES</h2>
                     <i class="bi bi-arrow-right-short"></i>
@@ -179,23 +179,23 @@
 
     <div class="footer-background">
         <div class="footer">
-           <div>
-                <img src="/static/img/santiclinic-logo white.png" alt="" class="logo-footer">
+            <div>
+                <a href="{{ url_for('home') }}"><img src="/static/img/santiclinic-logo white.png" alt="" class="logo-footer"></a>
             </div>
             <div class="footer-menu">
                 <div class="footer-links">
-                    <a href="">SOBRE NÓS</a>
+                    <a href="{{ url_for('sobre') }}">SOBRE NÓS</a>
                     <a href="{{ url_for('tratamentos') }}">TRATAMENTOS</a>
-                    <a href="">CONTACTOS</a>
+                    <a href="{{ url_for('contactos') }}">CONTACTOS</a>
                 </div>
                 <div class="footer-links">
-                    <a href="">SANTISKIN</a>
+                    <a href="https://santiskin.com/">SANTISKIN</a>
                     <a href="">BLOG</a>
                 </div>
                 <div class="social-footer">
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-tiktok"></i></a>
+                    <a href="https://facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://tiktok.com/"><i class="bi bi-tiktok"></i></a>
                 </div>
             </div>
         </div>
